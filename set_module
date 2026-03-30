@@ -1,0 +1,21 @@
+def sunion(s1,s2):
+    return s1|s2
+def sintersection(s1,s2):
+    return s1&s2
+def sdifference(s1,s2):
+    ch=input("(s1-s2/s2-s1):")
+    if ch=='s1-s2':
+        return s1-s2
+    else:
+        return s2-s1
+def ssymmetricdiff(s1,s2):
+    return s1^s2
+import set_module
+a=map(int,input("Enter Set a elms:").split())
+a=set(a)
+b=map(int,input("Enter Set b elems:").split())
+b=set(b)
+print("Union:",set_module.sunion(a,b))
+print("Intersection:",set_module.sintersection(a,b))
+print("Difference:",set_module.sdifference(a,b))
+print("Symmetric Difference:",set_module.ssymmetricdiff(a,b))
